@@ -1,0 +1,311 @@
+/************************
+ GENERAL
+************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  padding: 1em 0;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/************************
+ INTRODUCTION
+************************/
+.intro {
+  padding: 0 0.5em 1em;
+}
+
+.profile-img {
+  width: 65%;
+  align-self: center;
+}
+
+.profile {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/************************
+ NAVIGATION
+************************/
+header,
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  margin: 0 10px 5px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+nav .nav-link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/************************
+ PORTFOLIO
+************************/
+#portfolio {
+  padding: 1.5em 1em;
+}
+
+#portfolio h2 {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  padding-top: 1em;
+}
+
+/************************
+ SKILL
+************************/
+#skill {
+  padding-top: 3em;
+}
+
+#skill ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#skill ul li {
+  font-family: 'Merriweather', serif;
+  padding-bottom: 1em;
+}
+
+
+/************************
+ CONTACT
+************************/
+#contact {
+  padding: 3em 10%;
+}
+
+.contact-detail {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-left: 10px;
+}
+
+
+/************************
+ FOOTER
+************************/
+footer {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+footer hr {
+  margin-bottom: 2em;
+}
+
+.footer-full {
+  display: none;
+  margin: 0 0 1em 0;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float: right;
+}
+
+.footer-full li {
+  float: left;
+  margin-left: 2em;
+}
+
+
+
+/************************
+ COLORS
+************************/
+body {
+  background-color: #fafafa;
+}
+
+#portfolio,
+nav a {
+  background-color: #fff;
+}
+
+body,
+.nav-link,
+footer {
+  color: #4A4A4A;
+}
+
+.intro p,
+#contact p {
+  color: #7f7f7f;
+}
+
+footer hr {
+  border-top: 1px solid #e7e7e7;
+}
+
+
+/************************
+ MEDIA QUERIES
+************************/
+@media screen and (min-width: 768px) {
+  .intro {
+    padding: 2em;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 9em;
+  }
+
+  nav a {
+    background-color: inherit;
+  }
+
+  .profile {
+    flex-direction: row-reverse;
+  }
+
+  .profile p {
+    font-size: 1.25em;
+    text-align: left;
+    margin: 0 1em 0 0;
+  }
+
+  .profile-img {
+    width: 40%;
+  }
+
+  #portfolio {
+    padding: 2em;
+  }
+
+  .projects-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .project {
+    width: 49%;
+    padding-bottom: 2em;
+  }
+
+  .project p {
+    padding: 0 2em;
+  }
+
+  #skill ul {
+    padding: 0 14em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #contact p {
+    font-size: 1.25em;
+  }
+
+  .footer-simple {
+    display: none;
+  }
+
+  .footer-full {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .intro {
+    padding: 2em 4em;
+  }
+
+  header {
+    flex-direction: row;
+  }
+  nav {
+    margin-left: auto;
+    align-self: center;
+    padding: 0;
+  }
+
+  .project {
+    width: 32%;
+  }
+
+  .project p {
+    padding: 0 1em;
+  }
+
+  #skill ul {
+    padding: 0 24em;
+  }
+
+  #contact {
+    padding: 3em 20%;
+  }
+}
